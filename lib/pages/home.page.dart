@@ -4,8 +4,21 @@ import 'package:sale_management_app/constants/app_colors.dart';
 import 'package:sale_management_app/constants/text_style.dart';
 import 'package:sale_management_app/layout/button.layout.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -207,35 +220,34 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppColors.black,
-        unselectedItemColor: AppColors.primary,
         backgroundColor: AppColors.white,
+        onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
-              color: AppColors.primary,
+              color: _selectedIndex == 0 ? AppColors.black : AppColors.primary,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.favorite_outline,
-              color: AppColors.primary,
+              color: _selectedIndex == 1 ? AppColors.black : AppColors.primary,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.shopping_cart_outlined,
-              color: AppColors.primary,
+              color: _selectedIndex == 2 ? AppColors.black : AppColors.primary,
             ),
             label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person_outline,
-              color: AppColors.primary,
+              color: _selectedIndex == 3 ? AppColors.black : AppColors.primary,
             ),
             label: '',
           ),

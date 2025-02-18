@@ -1,3 +1,3 @@
-# sale_management_app
+# Sale Management App
 
-A new Flutter project.
+A Flutter project for managing sales and inventory.
