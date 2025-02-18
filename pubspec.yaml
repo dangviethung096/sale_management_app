@@ -1,0 +1,45 @@
+name: sale_management_app
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.17
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway/static/Raleway-Thin.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-ExtraLight.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Light.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Medium.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-SemiBold.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Bold.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-ExtraBold.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Black.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-ThinItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-ExtraLightItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-LightItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-Italic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-MediumItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-SemiBoldItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-BoldItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-ExtraBoldItalic.ttf
+        - asset: assets/fonts/Raleway/static/Raleway-BlackItalic.ttf
+    - family: Grechen_Fuemen
+      fonts:
+        - asset: assets/fonts/Grechen_Fuemen/GrechenFuemen-Regular.ttf
