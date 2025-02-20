@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sale_management_app/constants/app_colors.dart';
+import 'package:sale_management_app/constants/text_style.dart';
 
 class NewItemLayout extends StatelessWidget {
   const NewItemLayout(
@@ -15,21 +17,24 @@ class NewItemLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100),
+        border: Border.all(color: AppColors.white, width: 2),
         color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withAlpha(128),
-            offset: Offset(0, 5),
-            blurRadius: 10,
-          ),
-        ],
+        borderRadius: BorderRadius.circular(5),
       ),
-      child: Image.network(
-        imageUrl,
-        height: 130,
-        width: 130,
-        fit: BoxFit.cover,
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Image.network(
+              imageUrl,
+              height: 130,
+              width: 130,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Text(title, style: TextStyles.smallTitle),
+          Text(price, style: TextStyles.smallTitle, textAlign: TextAlign.right),
+        ],
       ),
     );
   }

@@ -232,12 +232,14 @@ class _HomePageState extends State<HomePage> {
                         title: 'Sản phẩm 1',
                         price: '100.000đ',
                       ),
+                      SizedBox(width: 10),
                       NewItemLayout(
                         imageUrl:
                             'https://s3-alpha-sig.figma.com/img/29fa/e184/053666ddc17b71621107f3fdefffc22d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=c7TC8a0DLsdrAK9rEN9bCintJ9-BnkFdBkg6zjtAVmdW8oAm~rqidYm2rODiussxGHYMBgoc2PMYjwsyelFehtKdD541cDlQrUd7nM8ipEWOcMKxrcyBaDJS6nSeF8lTrBv12wPSMGPsjbJLAZ5vAL4se4aL9WiKEJPSJmabne4P2jrsPU18T55pYtkJ1RadoH3mCPwbeJ8sETX8SgaPtub9akp4F7yc2JoIxGf9rOToWPjLMai0Pt43xQNzpUZylEjsJFPW9M5w0WFiVQJsDTOmTIkkQmzTe6KiyEuDodp7QwWm6DWicLenG89sWRHrt6KjGbasru9OZXHo9NhkBw__',
                         title: 'Sản phẩm 2',
                         price: '100.000đ',
                       ),
+                      SizedBox(width: 10),
                       NewItemLayout(
                         imageUrl:
                             'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
@@ -276,67 +278,64 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 28),
                 CategoryTitleInAccountLayout(title: 'Phân loại'),
                 SizedBox(height: 16),
-                SizedBox(
-                  height: 750,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CategoryItemLayout(
-                            numberItem: 200,
-                            linkImages: [
-                              'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
-                              'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
-                              'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
-                              'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
-                            ],
-                            title: 'Quần áo',
-                            homePadding: _homePadding,
-                          ),
-                          CategoryItemLayout(
-                            numberItem: 4,
-                            linkImages: [
-                              'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
-                              'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
-                              'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
-                              'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
-                            ],
-                            title: 'Giày dép',
-                            homePadding: _homePadding,
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          CategoryItemLayout(
-                            numberItem: 4,
-                            linkImages: [
-                              'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
-                              'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
-                              'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
-                              'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
-                            ],
-                            title: 'Túi xách',
-                            homePadding: _homePadding,
-                          ),
-                          CategoryItemLayout(
-                            numberItem: 4,
-                            linkImages: [
-                              'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
-                              'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
-                              'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
-                              'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
-                            ],
-                            title: 'Đồ tắm',
-                            homePadding: _homePadding,
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CategoryItemLayout(
+                          numberItem: 200,
+                          linkImages: [
+                            'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
+                            'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
+                            'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
+                            'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
+                          ],
+                          title: 'Quần áo',
+                          homePadding: _homePadding,
+                        ),
+                        CategoryItemLayout(
+                          numberItem: 4,
+                          linkImages: [
+                            'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
+                            'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
+                            'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
+                            'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
+                          ],
+                          title: 'Giày dép',
+                          homePadding: _homePadding,
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CategoryItemLayout(
+                          numberItem: 4,
+                          linkImages: [
+                            'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
+                            'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
+                            'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
+                            'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
+                          ],
+                          title: 'Túi xách',
+                          homePadding: _homePadding,
+                        ),
+                        CategoryItemLayout(
+                          numberItem: 4,
+                          linkImages: [
+                            'https://s3-alpha-sig.figma.com/img/6a6a/7129/1fde341b60adcf3abb0c9f834bcf0398?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KZwi8NWx5lczKXud6HI4xb5DmDic9kGd1pAnzDnS1zfeJWuosSrgjQWndLE~sqRmSCmYxLTxCVq0KOqjNJsd8FuBC8m~aGsQ0uFIBQ0BCzYi2btHgSZcty0tSH~47VDucuxM2PETG6hic2nZ0wVYmECFV8tS9parcrCcp2jaHZkCOqYnP~Rzw735ib7aWTlryfMaKpBNb9FwjidK109CVMb-dIpLBRhpV-RglNVZelpY770DbCVcuSTp3h-Te60CZxH9SRlBz~Rbk8S7uu2~DhKLN-qGkKq2AfWS1c714Ntkp3VCpW2FWRGIDNxWdUQtrnnp-gd8t4S~5V0wgNZWpQ__',
+                            'https://s3-alpha-sig.figma.com/img/3ad6/5535/3543163e7923ed0879a6a43a2d0874d2?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f8G-x-tzIaYFJc26WQCShf1mi-xhX1CB~DY7YdvE-ylE5-dg--1eGadrMuffWlp3PXP0wemWd6Q2BZ2HGHr2x8Lo6hXk50ulKWlS7cBWNpjM33aH2tv~ymF-R5ScLUq2RG00ayOj-5QCSH6pBlwkJvb0T6AyXJO7j3E0VVniFJHUC-nlzk1HDgzPKDqD80bjqyxvZ3aUgMHCEY-jyPfBjjTfdhkgIVm1iIABk-JDwcZJgfUQMDbGqNHN2CQ6pxQEEb3gArucCdvi3s36JJz8oo1teP2NrnA64m1KCoWldqO2dElYx7MlixQARGYx1rlibDlOtrClqYfwXBmFYlAKoA__',
+                            'https://s3-alpha-sig.figma.com/img/4255/c3d5/5af4d2bf5fb32d96303a1780d9473aed?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=rSbcYxTkwQR8-d1D9rtbmUZrcCxYlfFWGHnSvr-QPH8J7CY4djK-liZoi9CirGCqpAJRcoIHohKzJ4pEIiw9MnBJfXu8EKsrkrcw9m9RD1EotjOfo6AuwX8glXM7n~CwM-zqUzywxcyek1tvUPNnUU~OX4Xyen8yuGmf0eT7uomMu-z5eXgjLJOWQbVhzVKD3fzxegY1TEZiyYOE-jDuPJJXgNYmQX4Y5eEuYHMbRzihpPOvFeJGXvIl~e0O1fhweGHCsV3DBOWpp53MKkl~quLMwETUi4gA6F6agT74F3ZnDs0qDHdMOKklhgujOXwPrApUh8~ojEKecbEELuVbqw__',
+                            'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
+                          ],
+                          title: 'Đồ tắm',
+                          homePadding: _homePadding,
+                        ),
+                      ],
+                    )
+                  ],
                 ),
                 SizedBox(
                   height: 28,
