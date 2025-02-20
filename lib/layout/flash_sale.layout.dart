@@ -108,3 +108,38 @@ class CountdownTimerState extends State<CountdownTimer> {
     );
   }
 }
+
+class FlashSaleItem extends StatelessWidget {
+  const FlashSaleItem(
+      {super.key, required this.imageUrl, required this.edgeSize});
+
+  final String imageUrl;
+  final double edgeSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: edgeSize,
+      height: edgeSize,
+      decoration: BoxDecoration(
+        color: Color(0xFFFFEBEB),
+        border: Border.all(
+          color: Colors.white,
+          width: 3.0,
+        ),
+        borderRadius: BorderRadius.circular(5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withAlpha((0.3 * 255).toInt()),
+            offset: Offset(2, 2),
+            blurRadius: 5.0,
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(5),
+        child: Image.network(imageUrl, fit: BoxFit.cover),
+      ),
+    );
+  }
+}

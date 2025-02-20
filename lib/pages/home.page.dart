@@ -292,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 16,
                 ),
-                Text('Flash Sale Items'),
+                FlashSaleItems(homePadding: _homePadding),
                 SizedBox(
                   height: 28,
                 ),
@@ -300,7 +300,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 16,
                 ),
-                Text('Top product Items'),
+                TopProducts(),
                 SizedBox(
                   height: 28,
                 ),
@@ -308,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 16,
                 ),
-                Text('Just for you items'),
+                JustForYou(),
               ],
             ),
           ),
@@ -438,6 +438,130 @@ class CategoryItems extends StatelessWidget {
             ),
           ],
         )
+      ],
+    );
+  }
+}
+
+class FlashSaleItems extends StatelessWidget {
+  const FlashSaleItems({super.key, required this.homePadding});
+
+  final double homePadding;
+
+  @override
+  Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
+    final double edgeSize = (screenWidth - homePadding - 40) / 3;
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/39a9/4b6c/b66665a43b8e7d98053af3ed69d2469a?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=G1~Cqc3HD6AA-xIUy4-HMgJLaWkR4yQHScMzZIHOfFK6TJ~4jkcppSUbNCwM7tJs~eBwD~427wd7GMitdxSrM1covP~wPI~Xhop6r3RH5odTVOOtf6DcyNSupzsu8Q8jqgwydPgx2kVsgc34TpVlE0fwywPUYvcaji6XE-tyt2Iq49JWc4vzFinohIrZWWUWmVzDDHUY-4AZNHxx6I~nBZ9zrXFEoxFaT-BeVIPQ8Mg0ZijfML04qPcK~m-xxh-DSvBmoTJqjWSMwT0wI9C5syQJbgu041tWotfmQmOtANdB2lwXF1IzkaWOysJuXgIFqrPDNfahTRy8O3-NU5Lvgg__',
+                edgeSize: edgeSize),
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/32b2/fed3/dd6e97ca36cbcbf5ca57596f7c6547d3?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=eCPjlgBV1bCx9HfJPBWPa6ZYJWyy~JyI2fcMOnaADM5yo8xw~jQXQaT1l1fmHNgdWVSoKwIdTliqgkTzuwQgNfSBYcJRqsWUYuKu-j6lVpLJwB0lLFvNZhI74C6dgM-xFyDeXMVC~9zNkn6aR3K2vGOwzz4R9~GQR-zRmkrpFgFhBIRZHKwRIelMwQCk4XNhD829TA8Xd3HE4ClRe~7zRl1XTD047Asc0SxlUOBFUp5IDH0M3QG6dKa-kOmT30Sg472pvvyw2WJs4Rt6hwyJkq3G4bEJBkJsmRK6szkfO58MlIbY9wssfr9QAGvd2hHvJEoLRMapVY1WLpeERXdAwA__',
+                edgeSize: edgeSize),
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/3a39/f1d1/d23c65e543db966efd9955c99cf0a27a?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=W06m4DO17BulZgNSH2MOtpqXx1ir3TgBg4VwvnawGZk-lMM8C4zGSP1vL5z-aOCJh19-PUnMYkzL2d9RV2xgjJwXR2F3JjrY02BG7Jlip3MrmqbnB4QgIV-9luWmucU2vyVcLYNY0AlvSDmS7ib6h0JCVHJYAZcSHSmazJ0ekrwxv3Dzqreei5UxrAEVxyaYRMWwsEVFd-AxLRsjS6lDmPy7izs5V7uNmnd4CA2JNKFuSox7e3YTTDZzCbXKrImGev3rqGQoij1HyeT21VFfv4wsrUTx3bdVUqsfUSQnVL95dg3ukzU1WgB7PXD-QJCDOHn8-UrDqHMexdQthIW6PA__',
+                edgeSize: edgeSize),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/337a/22ae/49b350434fc9e50a9abb7351559ff374?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Xm73g8DSdSRlGDpa-uHZtf~bd8sikY269DLyTQ4xN412aKgDRQ8yG8~KARXRSXy7fMzqpLBpoZwwSvKiQnb7~-imM2OWV~xqIjKhkb9dMFHhkIf7ZSQVDoroK~wcUqHViqahO1f0DVqE5DpS8MTMgQlwcVvLzNV9v3dGEZ9zC1IvLbv9X6raFGbatBizdBAYJIPC7Lhv~WiJpu3MV6Ox-vkyPweSJiJPe3uTgW6EOkimHXJcZDqxjZXd3pZzdXgbf0BD86b25zJCNOi~ZmwmbVSa8rrcSrKBtQthn0fxLQSOdBX97FUVW3CKzLar2wgk0v2qx96CGNMRch2~tx431g__',
+                edgeSize: edgeSize),
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/902c/2ed6/848fbde49066a7244b1f4197b721c175?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=s5oG0yei9ia8nOXG7nS-6vS2dJnX0Yf8lvNk7-DsTRb396KWOtp15soV1XB7a8GwJWZ6BkvlJWyXVmzv8Sra~KyYiTQmRTIXThXfQdNicFvAYEGXKJ6gg~eKlgqPeNyGjKQOe~Rn16jXYh0YWZP46OKfoiZi3~eY1NVXQj3KYYqLmMlAtQP-kEPhBesnV5dGFUvSjNzqLJLkAbN~ayzImpZlM-qf76sI7a~FCEQDnSuRAz4Vf3g7CfP80YYQcDCsLr8IuyVeCRI4ANlvjczGqVkGo3FLM1zAyaKnIu7iLrqKxIrtNWNOwNL~hWm~xwQvNYTB2ojhRPmToehz~LLKig__',
+                edgeSize: edgeSize),
+            FlashSaleItem(
+                imageUrl:
+                    'https://s3-alpha-sig.figma.com/img/cc41/14d5/27454b7282c49edc81b76bb6c1314605?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XtQtJbGP~nCm3G1oFisDBgjyJRPab9LpuCXa3O17nJWJsXzFFq1vegOsYOIgrwXgmP85IuGeGkeJM1dad75YCdJxEfjsVZxL1F5EykqM3JpMtX-KoLDH6lP1eLw3VLw7nllnFiUq8RQ1kL927cPJX6A8kWOU5a4sEKSqU3sf0V6PSMOgwstnGI2-GdxxtSpV1CpLEZq8Za-M0ZEDEo95u0selz5RQ6jZUOSzzFUIAQk~orCMnzQEMwM8ZGwK94wj-89Sc-OEE7AXyagOl0oRmEpfrmsbBDAH0f5r3g9LUP2OKKCzPh9jVfYxEj3qY40XuGbLZ-ZGnaIztG95lO8-Aw__',
+                edgeSize: edgeSize),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class TopProducts extends StatelessWidget {
+  const TopProducts({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double radius = (screenWidth - 32 - 60) / 5;
+    return Row(
+      children: [
+        for (int i = 0; i < 9; i++)
+          i % 2 == 0
+              ? Container(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withAlpha((0.3 * 255).toInt()),
+                        offset: Offset(2, 2),
+                        blurRadius: 5.0,
+                      ),
+                    ],
+                  ),
+                  child: ClipOval(
+                    child: Image.network(
+                      'https://s3-alpha-sig.figma.com/img/8fde/1dd4/694209a582e512582dbd19cc2b269514?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Te4GVg4JXDyTqbJNTwi8z5NMq-ELqLKM11FYgtKGCSfZDVbv7YLrs9YGlGgysdNpApK3jzjERlLRfjNMWWqDcsCEsaUqxQ9O8sU8FJrV~sP7qop4-7-uiFJ9dv66Oc4sHsVNJEFYDfkLuWlRArvwUyDhN5LOQiRTsDLxHJdQsXcIlaF9Jw2vsTV8~kfqsX6GJZKJMniJvVpP2lJeLOeTEJg0QMI0lWwzKH1JJKT62Zo1gNnQ3TWOzxmSfHleTANX8XU6k3EPMZzAYdxw6CHr1NRZ3Q-p9HWYtjc~clhzs3lagh10XcVUf~Cpso6lCXAEnmUBdvTkL~Ri25M5v8RY0A__',
+                      height: radius,
+                      width: radius,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                )
+              : SizedBox(width: 10),
+      ],
+    );
+  }
+}
+
+class JustForYou extends StatelessWidget {
+  const JustForYou({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double edgeImageSize = (screenWidth - 32 - 26) / 2;
+
+    return Column(
+      children: [
+        for (int i = 0; i < 3; i++)
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              for (int k = 0; k < 2; k++)
+                NewItemLayout(
+                  imageUrl:
+                      'https://s3-alpha-sig.figma.com/img/a83e/a946/c62c6f134effe41537b18c9db6256a82?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=q~GjTZx~V2MLVqftyLFY3CuZZPUELdcfCgXp0JF~~hyWwTNBnaAdoXptI4iy2htZH3JPxSXoAYE7KzhbY~aab4DJyoAI59US7eYNnaGgUbRr7CBYl6iRhD12tdrdh4f12lPuYt4Ao~DWK0wJ5qpuS4Lh-RiuTv7e6I4BiWdXy47HxXQ11~hOC~nj5At~~Jsm~iBZuHSCCAB7v3Pjhnskwm9UUccKVo-WoYDzB3qbAPVO5-O5zzqbWUN1tHATEqv04NuLtj5p85eSJaTs127QV4emX6revGmhjNamc1uWm92O3jTlFKGLg7~9dp4AwJAiojNCzrjlpLbA6xbDOdt9Dg__',
+                  title: 'Áo thun',
+                  price: '100.000đ',
+                  edgeImageSize: edgeImageSize,
+                ),
+            ],
+          )
       ],
     );
   }

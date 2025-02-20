@@ -7,15 +7,16 @@ class NewItemLayout extends StatelessWidget {
       {super.key,
       required this.imageUrl,
       required this.title,
-      required this.price});
+      required this.price,
+      this.edgeImageSize = 130});
 
   final String imageUrl;
   final String title;
   final String price;
+  final double edgeImageSize;
 
   @override
   Widget build(BuildContext context) {
-    double edgeImageSize = 130;
     double widthContainer = edgeImageSize + 2;
 
     return Container(
@@ -34,6 +35,7 @@ class NewItemLayout extends StatelessWidget {
               height: edgeImageSize,
               width: edgeImageSize,
               fit: BoxFit.cover,
+              alignment: Alignment.topCenter,
             ),
           ),
           SizedBox(height: 5),
