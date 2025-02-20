@@ -49,32 +49,35 @@ class CategoryItemLayout extends StatelessWidget {
           ],
         ),
         SizedBox(height: 6),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                SizedBox(width: 5),
-                Text(title, style: TextStyles.smallTitle),
-              ],
-            ),
-            Row(
-              children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: Color(0xFFF3F3F3),
+        SizedBox(
+          width: widthSize,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  SizedBox(width: 5),
+                  Text(title, style: TextStyles.smallTitle),
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Color(0xFFF3F3F3),
+                    ),
+                    child: Text(
+                      '$numberItem',
+                      style: TextStyles.smallTitle,
+                    ),
                   ),
-                  child: Text(
-                    '$numberItem',
-                    style: TextStyles.smallTitle,
-                  ),
-                ),
-                SizedBox(width: 5),
-              ],
-            ),
-          ],
+                  SizedBox(width: 5),
+                ],
+              ),
+            ],
+          ),
         )
       ],
     );
