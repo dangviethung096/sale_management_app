@@ -24,13 +24,15 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  final double _homePadding = 16;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(_homePadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -279,7 +281,7 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: [
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryItemLayout(
                             numberItem: 200,
@@ -290,6 +292,7 @@ class _HomePageState extends State<HomePage> {
                               'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
                             ],
                             title: 'Quần áo',
+                            homePadding: _homePadding,
                           ),
                           CategoryItemLayout(
                             numberItem: 4,
@@ -300,12 +303,13 @@ class _HomePageState extends State<HomePage> {
                               'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
                             ],
                             title: 'Giày dép',
+                            homePadding: _homePadding,
                           ),
                         ],
                       ),
                       SizedBox(height: 10),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryItemLayout(
                             numberItem: 4,
@@ -316,6 +320,7 @@ class _HomePageState extends State<HomePage> {
                               'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
                             ],
                             title: 'Túi xách',
+                            homePadding: _homePadding,
                           ),
                           CategoryItemLayout(
                             numberItem: 4,
@@ -326,6 +331,7 @@ class _HomePageState extends State<HomePage> {
                               'https://s3-alpha-sig.figma.com/img/d0ca/85b1/3b70dabc3ccf004f28f528775bf37ec8?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ECqvwvXad5LiZWydXqFU96rluOJuBz3M3lm6X5TYCgB2mTvAz~wkmswVdJvu25HIMZUph~B86oFuiLLulukHM0FgmAhyjS0EfO3KSR9PmHdaX7zLpyma6qy9qCpo89rGjQTJBIJ94oSin9mukhXAIdLLbZ9G4fo0qeHVB0ekNGOb2mjSNEjddaKFtxQMEJ67jGwPSuRgWBJ0jg33N-kDVWbl5tlY9ZvUPvlI0bXTW6CpVlghSU1S90GJmz4n06sYLthDK5uSC4Z4IayG5iY8eoLdcMop4yQ0isxziLD~8TqEYomJ6N2MVx4UW90VMcnCRi~5TiheZdcgYlWhpPRK5w__',
                             ],
                             title: 'Đồ tắm',
+                            homePadding: _homePadding,
                           ),
                         ],
                       )
