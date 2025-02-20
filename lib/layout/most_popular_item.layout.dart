@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sale_management_app/constants/app_colors.dart';
+import 'package:sale_management_app/constants/text_style.dart';
 
 class MostPopularItemLayout extends StatelessWidget {
   const MostPopularItemLayout(
@@ -9,23 +11,42 @@ class MostPopularItemLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.network(
-          imageUrl,
-          width: 93,
-          height: 103,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [Text('1780'), Icon(Icons.heart_broken)],
+    const double imageWidth = 93;
+    const double imageHeight = 103;
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Image.network(
+            imageUrl,
+            width: imageWidth,
+            height: imageHeight,
+          ),
+          SizedBox(height: 5),
+          SizedBox(
+            width: imageWidth,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    Text('1780', style: TextStyles.smallTitle),
+                    Icon(
+                      Icons.favorite,
+                      size: 11,
+                      color: AppColors.primary,
+                    ),
+                  ],
+                ),
+              ],
             ),
-            Text(status),
-          ],
-        )
-      ],
+          ),
+          SizedBox(height: 5),
+        ],
+      ),
     );
   }
 }

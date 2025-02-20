@@ -15,6 +15,9 @@ class NewItemLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double edgeImageSize = 130;
+    double widthContainer = edgeImageSize + 2;
+
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.white, width: 2),
@@ -22,18 +25,34 @@ class NewItemLayout extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(5),
             child: Image.network(
               imageUrl,
-              height: 130,
-              width: 130,
+              height: edgeImageSize,
+              width: edgeImageSize,
               fit: BoxFit.cover,
             ),
           ),
-          Text(title, style: TextStyles.smallTitle),
-          Text(price, style: TextStyles.smallTitle, textAlign: TextAlign.right),
+          SizedBox(height: 5),
+          SizedBox(
+            width: widthContainer,
+            child: Text(
+              title,
+              style: TextStyles.mediumBody,
+              textAlign: TextAlign.left,
+            ),
+          ),
+          SizedBox(
+            width: widthContainer,
+            child: Text(
+              price,
+              style: TextStyles.smallTitle,
+              textAlign: TextAlign.left,
+            ),
+          ),
         ],
       ),
     );
