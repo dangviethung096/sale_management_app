@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class TextStyles {
   static const TextStyle bigTitle = TextStyle(
     fontSize: 28,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     fontFamily: 'Raleway',
+    height: 1.29,
+    letterSpacing: -0.28,
   );
 
   static const TextStyle mediumTitle = TextStyle(

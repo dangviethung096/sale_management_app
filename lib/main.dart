@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sale_management_app/pages/account.page.dart';
+import 'package:sale_management_app/pages/flash_sale.page.dart';
 import 'package:sale_management_app/pages/home.page.dart';
 import 'package:sale_management_app/pages/login.page.dart';
 
@@ -17,7 +19,9 @@ class MainApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (BuildContext context) => const LoginPage(),
+        '/account': (BuildContext context) => const AccountPage(),
         '/home': (BuildContext context) => const HomePage(),
+        '/flash-sale': (BuildContext context) => const FlashSalePage(),
       },
     );
   }
