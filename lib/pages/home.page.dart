@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sale_management_app/constants/text_style.dart';
+import 'package:sale_management_app/layout/category_item.layout.dart';
 import 'package:sale_management_app/layout/category_title.layout.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,22 +13,24 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Text('Cửa hàng', style: TextStyles.bigTitle),
-                  SizedBox(width: 19),
-                  SearchBar(),
-                ],
-              ),
-              SizedBox(height: 20),
-              BigSaleBanner(),
-              SizedBox(height: 10),
-              BannerControls(),
-              SizedBox(height: 22),
-              Categories(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text('Cửa hàng', style: TextStyles.bigTitle),
+                    SizedBox(width: 19),
+                    SearchBar(),
+                  ],
+                ),
+                SizedBox(height: 20),
+                BigSaleBanner(),
+                SizedBox(height: 10),
+                BannerControls(),
+                SizedBox(height: 22),
+                Categories(),
+              ],
+            ),
           ),
         ),
       ),
@@ -206,12 +209,69 @@ class BannerControls extends StatelessWidget {
 
 class Categories extends StatelessWidget {
   const Categories({super.key});
+  static const List<String> categories = [
+    'Quần áo',
+    'Giày dép',
+    'Túi xách',
+    'Đồ lót',
+    'Đồng hồ',
+    'Phụ kiện'
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         CategoryTitle(title: 'Danh mục'),
+        SizedBox(
+          height: 20,
+        ),
+        Column(
+          children: [
+            for (int i = 0; i < 3; i++)
+              if (i == 0)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    for (int k = 0; k < 2; k++)
+                      CategoryItemLayout(
+                        title: categories[i * 2 + k],
+                        numberItem: 4,
+                        linkImages: [
+                          'https://placehold.co/75x75/png',
+                          'https://placehold.co/75x75/png',
+                          'https://placehold.co/75x75/png',
+                          'https://placehold.co/75x75/png',
+                        ],
+                        homePadding: 20,
+                      ),
+                  ],
+                )
+              else
+                Column(
+                  children: [
+                    SizedBox(height: 6),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        for (int k = 0; k < 2; k++)
+                          CategoryItemLayout(
+                            title: categories[i * 2 + k],
+                            numberItem: 4,
+                            linkImages: [
+                              'https://placehold.co/75x75/png',
+                              'https://placehold.co/75x75/png',
+                              'https://placehold.co/75x75/png',
+                              'https://placehold.co/75x75/png',
+                            ],
+                            homePadding: 20,
+                          ),
+                      ],
+                    ),
+                  ],
+                )
+          ],
+        ),
       ],
     );
   }
