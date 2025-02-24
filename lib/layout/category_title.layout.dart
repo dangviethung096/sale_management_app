@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sale_management_app/constants/text_style.dart';
 
-class CategoryTitleInAccountLayout extends StatelessWidget {
-  const CategoryTitleInAccountLayout({super.key, required this.title});
+class CategoryTitle extends StatelessWidget {
+  const CategoryTitle({super.key, required this.title});
 
   final String title;
 
@@ -12,12 +11,27 @@ class CategoryTitleInAccountLayout extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title, style: TextStyles.mediumTitle),
+        Text(
+          title,
+          style: TextStyle(
+            color: Color(0xFF202020),
+            fontSize: 21,
+            fontFamily: 'Raleway',
+            fontWeight: FontWeight.w700,
+            height: 1.43,
+            letterSpacing: -0.21,
+          ),
+        ),
         Row(
           children: [
             Text(
               'Xem thêm',
-              style: TextStyles.smallTitle,
+              style: TextStyle(
+                color: Color(0xFF202020),
+                fontSize: 15,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w700,
+              ),
             ),
             SizedBox(width: 13),
             SizedBox(

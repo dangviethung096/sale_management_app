@@ -4,7 +4,7 @@ import 'package:sale_management_app/constants/app_colors.dart';
 import 'package:sale_management_app/constants/text_style.dart';
 import 'package:sale_management_app/layout/button.layout.dart';
 import 'package:sale_management_app/layout/category_item.layout.dart';
-import 'package:sale_management_app/layout/category_title_in_account.layout.dart';
+import 'package:sale_management_app/layout/category_title.layout.dart';
 import 'package:sale_management_app/layout/flash_sale.layout.dart';
 import 'package:sale_management_app/layout/most_popular_item.layout.dart';
 import 'package:sale_management_app/layout/new_item.layout.dart';
@@ -223,7 +223,7 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                 ),
                 SizedBox(height: 28),
-                CategoryTitleInAccountLayout(title: 'Sản phẩm mới'),
+                CategoryTitle(title: 'Sản phẩm mới'),
                 SizedBox(height: 16),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -253,7 +253,7 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                 ),
                 SizedBox(height: 28),
-                CategoryTitleInAccountLayout(title: 'Sản phẩm bán chạy'),
+                CategoryTitle(title: 'Sản phẩm bán chạy'),
                 SizedBox(height: 16),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -282,7 +282,7 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                 ),
                 SizedBox(height: 28),
-                CategoryTitleInAccountLayout(title: 'Phân loại'),
+                CategoryTitle(title: 'Phân loại'),
                 SizedBox(height: 16),
                 CategoryItems(homePadding: _homePadding),
                 SizedBox(
@@ -296,7 +296,7 @@ class _AccountPageState extends State<AccountPage> {
                 SizedBox(
                   height: 28,
                 ),
-                CategoryTitleInAccountLayout(title: 'Top products'),
+                CategoryTitle(title: 'Top products'),
                 SizedBox(
                   height: 16,
                 ),
@@ -304,7 +304,7 @@ class _AccountPageState extends State<AccountPage> {
                 SizedBox(
                   height: 28,
                 ),
-                CategoryTitleInAccountLayout(title: 'Just For You'),
+                CategoryTitle(title: 'Just For You'),
                 SizedBox(
                   height: 16,
                 ),
